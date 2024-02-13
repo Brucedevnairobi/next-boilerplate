@@ -4,7 +4,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import { ClerkProvider } from "@clerk/nextjs";
-import { ThemeProvider } from "./context/ThemeProvider";
+import { ThemeProvider } from "../context/ThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,7 +15,7 @@ const inter = Inter({
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
+  variable: "--font-spaceGrotesk",
 });
 
 export const metadata: Metadata = {
@@ -39,8 +39,8 @@ export default function RootLayout({
           appearance={{
             elements: {
               formButtonPrimary: "primary-gradient",
-              footerActionLink: "primary-text-gradient",
-            },
+              footerActionLink: "primary-text-gradient"
+            }
           }}
         >
           <ThemeProvider>{children}</ThemeProvider>
